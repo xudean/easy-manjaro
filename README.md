@@ -28,7 +28,7 @@ KDE桌面环境符合windows的操作习惯，这里以Manjaro KDE为例。
 
 manjaro的系统盘推荐使用rufus，从官方下载系统镜像后，使用rufus制作系统系统盘。
 
-![img](/home/xuda/github/easy-manjaro/README.assets/webp.webp)
+![img](assets/webp.webp)
 
 ### 系统安装
 
@@ -348,9 +348,9 @@ $ curl www.google.com -x 127.0.0.0:7890
 
   > 规则列表地址为：https://raw.githubusercontent.com/agate/gfwlist/master/dist/gfwlist.txt
 
-![image-20220320162048731](/home/xuda/github/easy-manjaro/README.assets/image-20220320162048731.png)
+![image-20220320162048731](assets/image-20220320162048731.png)
 
-![image-20220320162121040](/home/xuda/github/easy-manjaro/README.assets/image-20220320162121040.png)
+![image-20220320162121040](assets/image-20220320162121040.png)
 
 配置完成后，在switchyomega中切换proxy模式，即可科学上网。
 
@@ -681,11 +681,11 @@ $ sudo pacman -S netease-cloud-music vlc
 2. 选择“快捷键”
 3. 点击“添加应用程序”，在其中搜索"konsole"
 
-![image-20220320173856179](/home/xuda/github/easy-manjaro/README.assets/image-20220320173856179.png)
+![image-20220320173856179](assets/image-20220320173856179.png)
 
 4. 在打开新标签中设置快捷键。然后即可通过快捷键快速打开新窗口
 
-![image-20220320174038151](/home/xuda/github/easy-manjaro/README.assets/image-20220320174038151.png)
+![image-20220320174038151](assets/image-20220320174038151.png)
 
 ## 美化
 
@@ -701,7 +701,7 @@ manjaro的驱动很强大，可以直接识别到外界的显示器。如果没�
 2. 在右侧配置对应的显示器作为主显示器即可
 3. 另外可以直接拖拽来排列显示器，注意两个显示器不要用重合的地方，不然会在多个显示器上有重复显示的内容。
 
-![image-20220320174538464](/home/xuda/github/easy-manjaro/README.assets/image-20220320174538464.png)
+![image-20220320174538464](assets/image-20220320174538464.png)
 
 ### 修改默认程序
 
