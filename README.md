@@ -1,7 +1,72 @@
+* 1. [介绍](#)
+* 2. [系统安装](#-1)
+	* 2.1. [系统版制作](#-1)
+	* 2.2. [系统安装](#-1)
+* 3. [包管理器及配置](#-1)
+	* 3.1. [pacman](#pacman)
+	* 3.2. [yay](#yay)
+* 4. [常用软件安装](#-1)
+	* 4.1. [中文输入法](#-1)
+	* 4.2. [开发环境安装](#-1)
+		* 4.2.1. [JDK安装](#JDK)
+		* 4.2.2. [go语言环境](#go)
+		* 4.2.3. [ python](#python)
+		* 4.2.4. [nodejs](#nodejs)
+		* 4.2.5. [npm](#npm)
+	* 4.3. [构建工具](#-1)
+		* 4.3.1. [maven](#maven)
+		* 4.3.2. [gradle](#gradle)
+		* 4.3.3. [ant](#ant)
+	* 4.4. [浏览器及科学上网配置](#-1)
+		* 4.4.1. [安装chrome](#chrome)
+		* 4.4.2. [科学上网](#-1)
+	* 4.5. [安装集成开发环境(IDE)](#IDE)
+		* 4.5.1. [安装jetbrains全家桶](#jetbrains)
+		* 4.5.2. [安装vscode](#vscode)
+	* 4.6. [常用工具](#-1)
+		* 4.6.1. [版本控制](#-1)
+		* 4.6.2. [终端 (oh-my-zsh)](#oh-my-zsh)
+		* 4.6.3. [文本编辑软件](#-1)
+		* 4.6.4. [通讯软件](#-1)
+		* 4.6.5. [截图工具](#-1)
+	* 4.7. [测试调试工具](#-1)
+		* 4.7.1. [postman](#postman)
+		* 4.7.2. [jemeter](#jemeter)
+		* 4.7.3. [arthas](#arthas)
+		* 4.7.4. [apipost](#apipost)
+	* 4.8. [抓包工具](#-1)
+		* 4.8.1. [wireshark](#wireshark)
+		* 4.8.2. [使用wireshark出现权限不足的问题](#wireshark-1)
+	* 4.9. [远程控制](#-1)
+		* 4.9.1. [finalshell](#finalshell)
+		* 4.9.2. [termius](#termius)
+		* 4.9.3. [sshpass](#sshpass)
+		* 4.9.4. [ FileZilla](#FileZilla)
+		* 4.9.5. [toDesk](#toDesk)
+		* 4.9.6. [安装远程工具remmina及链接windows插件](#remminawindows)
+	* 4.10. [安装虚拟机](#-1)
+		* 4.10.1. [virtualbox](#virtualbox)
+	* 4.11. [WPS](#WPS)
+	* 4.12. [思维导图](#-1)
+		* 4.12.1. [xmind](#xmind)
+	* 4.13. [Docker](#Docker)
+		* 4.13.1. [Docker](#Docker-1)
+		* 4.13.2. [docker-compose](#docker-compose)
+	* 4.14. [娱乐软件](#-1)
+		* 4.14.1. [网抑云音乐](#-1)
+* 5. [系统设置](#-1)
+	* 5.1. [快捷键设置](#-1)
+		* 5.1.1. [设置方式](#-1)
+* 6. [美化](#-1)
+* 7. [常见问题及解决办法](#-1)
+	* 7.1. [如何外接显示器问题](#-1)
+	* 7.2. [修改默认程序](#-1)
+
+
 # easy-manjaro
 > 从零构建一个基于manjaro linux的桌面开发环境，因本人从事java开发，下面需要的工具大多为java开发需要的，其他软件可自行在aur仓库中搜索安装。
 
-## 介绍
+##  1. <a name=''></a>介绍
 
 Manjaro基于Arch Linux，继承了Arch Linux滚动更新的特点，可以直接使用AUR上最齐全的软件。
 
@@ -20,23 +85,23 @@ Manjaro基于Arch Linux，继承了Arch Linux滚动更新的特点，可以直�
 
 所以，在全球知名的DistroWatch网站，[Manjaro的排名一直稳步快速上升](http://distrowatch.com/table.php?distribution=manjaro)，短短几年迅速成长为最受欢迎的Linux发行版之一，直逼老牌发行版OpenSuse和Debian。可以说，像Arch这样优秀的Linux系统，如果解决了易用性的大问题，想不成为数一数二的Linux发行版都难！
 
-## 系统安装
+##  2. <a name='-1'></a>系统安装
 
 KDE桌面环境符合windows的操作习惯，这里以Manjaro KDE为例。
 
-### 系统版制作
+###  2.1. <a name='-1'></a>系统版制作
 
 manjaro的系统盘推荐使用rufus，从官方下载系统镜像后，使用rufus制作系统系统盘。
 
 ![img](assets/webp.webp)
 
-### 系统安装
+###  2.2. <a name='-1'></a>系统安装
 
 略
 
-## 包管理器及配置
+##  3. <a name='-1'></a>包管理器及配置
 
-### pacman
+###  3.1. <a name='pacman'></a>pacman
 
 **Pacman** 包管理器是 [Arch Linux](https://baike.baidu.com/item/Arch Linux/8876099)的一大亮点。它将一个简单的二进制包格式和易用的构建系统结合了起来。不管软件包是来自官方的 Arch 库还是用户自己创建，Pacman 都能方便的管理。
 
@@ -83,7 +148,7 @@ sudo pacman -Syu　# 升级所有软件包
 sudo pacman -Qs # 搜索已安装的包
 ```
 
-### yay
+###  3.2. <a name='yay'></a>yay
 
 > Yay 是用 Go 编写的 Arch Linux AUR 包管理工具。
 
@@ -118,9 +183,9 @@ yay -Qi package # 检查安装的版本
 
 ***注意：yay需要在普通用户下使用，不用加`sudo`***
 
-## 常用软件安装
+##  4. <a name='-1'></a>常用软件安装
 
-### 中文输入法
+###  4.1. <a name='-1'></a>中文输入法
 
 因为Fcitx4有很多bug，中文输入法推荐使用fcitx5。[官方wiki](https://wiki.archlinux.org/title/Fcitx5_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87))
 
@@ -162,9 +227,9 @@ sudo pacman -S fcitx5-pinyin-zhwiki
 
 
 
-### 开发环境安装
+###  4.2. <a name='-1'></a>开发环境安装
 
-#### JDK安装
+####  4.2.1. <a name='JDK'></a>JDK安装
 
 JDK的安装方式很多，大概有如下几种：
 
@@ -225,19 +290,19 @@ OpenJDK 64-Bit Server VM (build 25.332-b04, mixed mode)
 
 sdkman的安装方式参考：[官方文档](https://sdkman.io/)
 
-#### go语言环境
+####  4.2.2. <a name='go'></a>go语言环境
 
 ```
 $ sudo pacman -S goland
 ```
 
-####  python
+####  4.2.3. <a name='python'></a> python
 
 > python环境linux都自带了
 
  略
 
-#### nodejs
+####  4.2.4. <a name='nodejs'></a>nodejs
 
 node的推荐使用nvm来进行管理，很方便管理不同版本的node环境
 
@@ -262,15 +327,15 @@ $ nvm ls
 $ nvm use v17.7.2
 ```
 
-#### npm
+####  4.2.5. <a name='npm'></a>npm
 
 ```
 $ sudo pacman -S npm
 ```
 
-### 构建工具
+###  4.3. <a name='-1'></a>构建工具
 
-#### maven
+####  4.3.1. <a name='maven'></a>maven
 
 [官方网站](https://maven.apache.org/)
 
@@ -280,7 +345,7 @@ $ sudo pacman -S npm
 $ sudo pacman -S maven
 ```
 
-#### gradle
+####  4.3.2. <a name='gradle'></a>gradle
 
 [官方网站](https://gradle.org/)
 
@@ -288,7 +353,7 @@ $ sudo pacman -S maven
 $ sudo pacman -S gradle
 ```
 
-#### ant
+####  4.3.3. <a name='ant'></a>ant
 
 ```
 $ sudo pacman -S ant
@@ -297,9 +362,9 @@ $ sudo pacman -S ant
 
 
 
-### 浏览器及科学上网配置
+###  4.4. <a name='-1'></a>浏览器及科学上网配置
 
-#### 安装chrome
+####  4.4.1. <a name='chrome'></a>安装chrome
 
 manjaro自带了firefox。但是对于开发者更倾向于chrome。
 
@@ -317,7 +382,7 @@ $ google-chrome-stable
 
 即可打开浏览器。后续可以在启动面板中找到图标来启动。
 
-#### 科学上网
+####  4.4.2. <a name='-1'></a>科学上网
 
 - 安装clash命令行客户端
 
@@ -354,9 +419,9 @@ $ curl www.google.com -x 127.0.0.0:7890
 
 配置完成后，在switchyomega中切换proxy模式，即可科学上网。
 
-### 安装集成开发环境(IDE)
+###  4.5. <a name='IDE'></a>安装集成开发环境(IDE)
 
-#### 安装jetbrains全家桶
+####  4.5.1. <a name='jetbrains'></a>安装jetbrains全家桶
 
 - 安装`jetbrain-toolbox`
 
@@ -366,7 +431,7 @@ sudo pacman -S jetbrains-toolbox
 
 - 然后即可通过toolbox安装其他IDE
 
-#### 安装vscode
+####  4.5.2. <a name='vscode'></a>安装vscode
 
 ```
 yay -S visual-studio-code-bin
@@ -374,9 +439,9 @@ yay -S visual-studio-code-bin
 
 
 
-### 常用工具
+###  4.6. <a name='-1'></a>常用工具
 
-#### 版本控制
+####  4.6.1. <a name='-1'></a>版本控制
 
 ##### svn
 
@@ -398,7 +463,7 @@ $ git config --global https.proxy http://127.0.0.1:7890
 $ git config --global https.proxy https://127.0.0.1:7890
 ```
 
-#### 终端 (oh-my-zsh)
+####  4.6.2. <a name='oh-my-zsh'></a>终端 (oh-my-zsh)
 
 [官方网站](https://ohmyz.sh/)
 
@@ -424,7 +489,7 @@ $ sudo pacman -S net-tools
 
 
 
-#### 文本编辑软件
+####  4.6.3. <a name='-1'></a>文本编辑软件
 
 ##### markdown
 
@@ -444,7 +509,7 @@ $ yay -S marktext
 
 - 自带的kate也很好用
 
-#### 通讯软件
+####  4.6.4. <a name='-1'></a>通讯软件
 
 安装微信和QQ需要的wine环境
 
@@ -477,7 +542,7 @@ yay -S wemeet-bin
 yay -S zoom
 ```
 
-#### 截图工具
+####  4.6.5. <a name='-1'></a>截图工具
 
 ##### 深度截图工具
 
@@ -493,35 +558,35 @@ linux上非常强大的截图，强烈推荐。
 sudo pacman -S flameshot
 ```
 
-### 测试调试工具
+###  4.7. <a name='-1'></a>测试调试工具
 
-#### postman
+####  4.7.1. <a name='postman'></a>postman
 
 ````
 sudo pacman -S postman-bin
 ````
 
-#### jemeter
+####  4.7.2. <a name='jemeter'></a>jemeter
 
 ```
 yay -S jmeter
 ```
 
-#### arthas
+####  4.7.3. <a name='arthas'></a>arthas
 
 ```
 yay -S arthas
 ```
 
-#### apipost
+####  4.7.4. <a name='apipost'></a>apipost
 
 ```
 yay -S apipost
 ```
 
-### 抓包工具
+###  4.8. <a name='-1'></a>抓包工具
 
-#### wireshark
+####  4.8.1. <a name='wireshark'></a>wireshark
 
 ```
 sudo pacman -S wireshark-qt
@@ -529,7 +594,7 @@ sudo pacman -S wireshark-qt
 sudo pacman -S tcpdump
 ```
 
-#### 使用wireshark出现权限不足的问题
+####  4.8.2. <a name='wireshark-1'></a>使用wireshark出现权限不足的问题
 
 使用wireshark出现Couldn’t run /usr/bin/dumpcap in child process: Permission denied解决办法
 
@@ -539,21 +604,21 @@ sudo chmod 750 /usr/bin/dumpcap
 sudo setcap cap_net_raw,cap_net_admin+eip /usr/bin/dumpcap
 ```
 
-### 远程控制
+###  4.9. <a name='-1'></a>远程控制
 
-#### finalshell
+####  4.9.1. <a name='finalshell'></a>finalshell
 
 ```
 yay -S finalshell
 ```
 
-#### termius
+####  4.9.2. <a name='termius'></a>termius
 
 ```
 yay -S termius
 ```
 
-#### sshpass
+####  4.9.3. <a name='sshpass'></a>sshpass
 
 上面两个是工具软件，sshpass是命令行工具
 
@@ -561,7 +626,7 @@ yay -S termius
 sudo pacman -S sshpass
 ```
 
-####  FileZilla
+####  4.9.4. <a name='FileZilla'></a> FileZilla
 
 服务器上传下载工具
 
@@ -569,7 +634,7 @@ sudo pacman -S sshpass
 sudo pacman -S filezilla
 ```
 
-#### toDesk
+####  4.9.5. <a name='toDesk'></a>toDesk
 
 最近很火的远程控制软件，所有平台可用，且不限速是向日葵、teamweaver的替代方案。
 
@@ -577,7 +642,7 @@ sudo pacman -S filezilla
 yay -S todesk
 ```
 
-#### 安装远程工具remmina及链接windows插件
+####  4.9.6. <a name='remminawindows'></a>安装远程工具remmina及链接windows插件
 
 ```
 sudo pacman -S remmina
@@ -586,9 +651,9 @@ yay -S remmina-plugin-rdesktop
 
 
 
-### 安装虚拟机
+###  4.10. <a name='-1'></a>安装虚拟机
 
-#### virtualbox
+####  4.10.1. <a name='virtualbox'></a>virtualbox
 
 linux下肯定是virtualbox 了
 
@@ -610,15 +675,15 @@ sudo pacman -S linux512-virtualbox-host-modules
 sudo pacman -S linux512 linux512-headers
 ```
 
-### WPS
+###  4.11. <a name='WPS'></a>WPS
 
 ```
 yay -S wps-office wps-office-mui-zh-cn ttf-wps-fonts
 ```
 
-### 思维导图
+###  4.12. <a name='-1'></a>思维导图
 
-#### xmind
+####  4.12.1. <a name='xmind'></a>xmind
 
 ````
 yay -S xmind-zen
@@ -630,9 +695,9 @@ yay -S xmind-zen
 yay -S xmind
 ```
 
-### Docker
+###  4.13. <a name='Docker'></a>Docker
 
-#### Docker
+####  4.13.1. <a name='Docker-1'></a>Docker
 
 - 安装
 
@@ -655,25 +720,25 @@ sudo chmod 666 /var/run/docker.sock
 sudo systemctl restart docker
 ```
 
-#### docker-compose
+####  4.13.2. <a name='docker-compose'></a>docker-compose
 
 ```
 sudo pacman -S docker-compose
 ```
 
-### 娱乐软件
+###  4.14. <a name='-1'></a>娱乐软件
 
-#### 网抑云音乐
+####  4.14.1. <a name='-1'></a>网抑云音乐
 
 ```
 $ sudo pacman -S netease-cloud-music vlc
 ```
 
-## 系统设置
+##  5. <a name='-1'></a>系统设置
 
-### 快捷键设置
+###  5.1. <a name='-1'></a>快捷键设置
 
-#### 设置方式
+####  5.1.1. <a name='-1'></a>设置方式
 
 以konsole为例，通过win+R直接打开新窗口
 
@@ -687,13 +752,13 @@ $ sudo pacman -S netease-cloud-music vlc
 
 ![image-20220320174038151](assets/image-20220320174038151.png)
 
-## 美化
+##  6. <a name='-1'></a>美化
 
 在“系统设置”->“外观”中自己选择喜欢的主题即可。
 
-## 常见问题及解决办法
+##  7. <a name='-1'></a>常见问题及解决办法
 
-### 如何外接显示器问题
+###  7.1. <a name='-1'></a>如何外接显示器问题
 
 manjaro的驱动很强大，可以直接识别到外界的显示器。如果没有识别到切换写显卡方案到开源驱动试下。另外设置主显示器方式如下：  
 
@@ -703,7 +768,7 @@ manjaro的驱动很强大，可以直接识别到外界的显示器。如果没�
 
 ![image-20220320174538464](assets/image-20220320174538464.png)
 
-### 修改默认程序
+###  7.2. <a name='-1'></a>修改默认程序
 
 1. 进入“系统设置”->”搜索默认程序“
 2. 修改对应的默认程序即可
