@@ -249,7 +249,24 @@ $ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bas
 
 重新打开一个终端，输入`nvm`当出现命令说明时即证明安装完成。
 
+- 使用
 
+```
+# 列出可用版本
+$ nvm ls-remote
+# 安装制定版本
+$ nvm install v17.7.2（上一条命令查出的版本号）
+# 列出本地已经安装的版本号
+$ nvm ls
+# 使用制定版本
+$ nvm use v17.7.2
+```
+
+#### npm
+
+```
+$ sudo pacman -S npm
+```
 
 ### 构建工具
 
@@ -358,3 +375,335 @@ yay -S visual-studio-code-bin
 
 
 ### 常用工具
+
+#### 版本控制
+
+##### svn
+
+````
+$ sudo pacman -S svn
+````
+
+##### git
+
+> 系统自带
+
+- 配置
+
+```
+$ git config --global user.name "John Doe"
+$ git config --global user.email johndoe@example.com
+#代理配置,科学上网可加快github代码下载速度
+$ git config --global https.proxy http://127.0.0.1:7890
+$ git config --global https.proxy https://127.0.0.1:7890
+```
+
+#### 终端 (oh-my-zsh)
+
+[官方网站](https://ohmyz.sh/)
+
+- 安装
+
+```
+$ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+如果curl速度过慢或无法访问，可使用curl代理
+
+```
+$ sh -c "$(curl -x 127.0.0.1:7890 -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+- 插件安装
+  - [oh-my-zsh插件推荐](https://www.jianshu.com/p/9189eac3e52d)
+
+```
+网络命令
+$ sudo pacman -S net-tools
+```
+
+
+
+#### 文本编辑软件
+
+##### markdown
+
+- typora
+
+```
+$ sudo pacman -S typora
+```
+
+因为typora收费了，可能有些同学比较反感。推荐另一款开源、且风格相似的markdown编辑器
+
+- marktext
+
+```
+$ yay -S marktext
+```
+
+- 自带的kate也很好用
+
+#### 通讯软件
+
+安装微信和QQ需要的wine环境
+
+```
+sudo pacman -S base-devel 
+sudo pacman -S wine-mono
+```
+
+##### 微信
+
+```
+yay -S deepin-wine-wechat
+```
+
+##### QQ
+
+```]
+yay -S deepin-wine-tim	
+```
+
+##### 腾讯会议
+
+```
+yay -S wemeet-bin	
+```
+
+##### Zoom
+
+```
+yay -S zoom
+```
+
+#### 截图工具
+
+##### 深度截图工具
+
+```
+sudo pacman -S deepin-screenshot
+```
+
+##### flameshot（火焰截图）
+
+linux上非常强大的截图，强烈推荐。
+
+```
+sudo pacman -S flameshot
+```
+
+### 测试调试工具
+
+#### postman
+
+````
+sudo pacman -S postman-bin
+````
+
+#### jemeter
+
+```
+yay -S jmeter
+```
+
+#### arthas
+
+```
+yay -S arthas
+```
+
+#### apipost
+
+```
+yay -S apipost
+```
+
+### 抓包工具
+
+#### wireshark
+
+```
+sudo pacman -S wireshark-qt
+# 配合tcpdump抓宝使用
+sudo pacman -S tcpdump
+```
+
+#### 使用wireshark出现权限不足的问题
+
+使用wireshark出现Couldn’t run /usr/bin/dumpcap in child process: Permission denied解决办法
+
+```
+sudo chgrp myusername /usr/bin/dumpcap  # myusername是你使用wireshark的当前用户名
+sudo chmod 750 /usr/bin/dumpcap
+sudo setcap cap_net_raw,cap_net_admin+eip /usr/bin/dumpcap
+```
+
+### 远程控制
+
+#### finalshell
+
+```
+yay -S finalshell
+```
+
+#### termius
+
+```
+yay -S termius
+```
+
+#### sshpass
+
+上面两个是工具软件，sshpass是命令行工具
+
+```
+sudo pacman -S sshpass
+```
+
+####  FileZilla
+
+服务器上传下载工具
+
+```
+sudo pacman -S filezilla
+```
+
+#### toDesk
+
+最近很火的远程控制软件，所有平台可用，且不限速是向日葵、teamweaver的替代方案。
+
+```
+yay -S todesk
+```
+
+#### 安装远程工具remmina及链接windows插件
+
+```
+sudo pacman -S remmina
+yay -S remmina-plugin-rdesktop
+```
+
+
+
+### 安装虚拟机
+
+#### virtualbox
+
+linux下肯定是virtualbox 了
+
+```
+sudo pacman -S virtualbox
+```
+
+如果在使用过程中报错，一般是由于缺少linux-header引起的
+
+```
+sudo pacman -S linux<内核版本>-virtualbox-host-modules
+sudo pacman -S linux<内核版本> linux<内核版本>-headers
+```
+
+将内核版本替换成实际的即可，如
+
+```
+sudo pacman -S linux512-virtualbox-host-modules
+sudo pacman -S linux512 linux512-headers
+```
+
+### WPS
+
+```
+yay -S wps-office wps-office-mui-zh-cn ttf-wps-fonts
+```
+
+### 思维导图
+
+#### xmind
+
+````
+yay -S xmind-zen
+````
+
+也可以安装另一个版本
+
+```
+yay -S xmind
+```
+
+### Docker
+
+#### Docker
+
+- 安装
+
+```
+sudo pacman -S docker
+# 启动docker
+sudo systemctl start docker
+```
+
+- 普通用户使用docker
+
+```
+#将登陆用户加入到docker用户组中
+sudo gpasswd -a $USER docker   
+#更新用户组
+newgrp docker     
+#更新下权限
+sudo chmod 666 /var/run/docker.sock
+# 重启一下
+sudo systemctl restart docker
+```
+
+#### docker-compose
+
+```
+sudo pacman -S docker-compose
+```
+
+### 娱乐软件
+
+#### 网抑云音乐
+
+```
+$ sudo pacman -S netease-cloud-music vlc
+```
+
+## 系统设置
+
+### 快捷键设置
+
+#### 设置方式
+
+以konsole为例，通过win+R直接打开新窗口
+
+1. 打开系统设置
+2. 选择“快捷键”
+3. 点击“添加应用程序”，在其中搜索"konsole"
+
+![image-20220320173856179](/home/xuda/github/easy-manjaro/README.assets/image-20220320173856179.png)
+
+4. 在打开新标签中设置快捷键。然后即可通过快捷键快速打开新窗口
+
+![image-20220320174038151](/home/xuda/github/easy-manjaro/README.assets/image-20220320174038151.png)
+
+## 美化
+
+在“系统设置”->“外观”中自己选择喜欢的主题即可。
+
+## 常见问题及解决办法
+
+### 如何外接显示器问题
+
+manjaro的驱动很强大，可以直接识别到外界的显示器。如果没有识别到切换写显卡方案到开源驱动试下。另外设置主显示器方式如下：  
+
+1. 进入“系统设置”->”显卡与显示器“->“显示显示器配置”
+2. 在右侧配置对应的显示器作为主显示器即可
+3. 另外可以直接拖拽来排列显示器，注意两个显示器不要用重合的地方，不然会在多个显示器上有重复显示的内容。
+
+![image-20220320174538464](/home/xuda/github/easy-manjaro/README.assets/image-20220320174538464.png)
+
+### 修改默认程序
+
+1. 进入“系统设置”->”搜索默认程序“
+2. 修改对应的默认程序即可
