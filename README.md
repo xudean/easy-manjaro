@@ -244,8 +244,12 @@ node的推荐使用nvm来进行管理，很方便管理不同版本的node环境
 - 安装
 
 ```
-$ sudo pacman -S nvm
+$ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
 ```
+
+重新打开一个终端，输入`nvm`当出现命令说明时即证明安装完成。
+
+
 
 ### 构建工具
 
@@ -348,6 +352,9 @@ sudo pacman -S jetbrains-toolbox
 #### 安装vscode
 
 ```
-sudo pacman -S visual-studio-code-bin # vscode
+yay -S visual-studio-code-bin
 ```
 
+
+
+### 常用工具
