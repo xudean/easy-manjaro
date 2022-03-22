@@ -67,7 +67,8 @@
 	numbering=true
 	autoSave=true
 	/vscode-markdown-toc-config -->
-<!-- /vscode-markdown-toc --># easy-manjaro
+<!-- /vscode-markdown-toc -->
+# easy-manjaro
 > 从零构建一个基于manjaro linux的桌面开发环境，因本人从事java开发，下面需要的工具大多为java开发需要的，其他软件可自行在aur仓库中搜索安装。
 
 * 1. [介绍](#)
