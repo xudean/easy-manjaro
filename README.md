@@ -1,3 +1,6 @@
+# easy-manjaro
+> 从零构建一个基于manjaro linux的桌面开发环境，因本人从事java开发，下面需要的工具大多为java开发需要的，其他软件可自行在aur仓库中搜索安装。
+
 <!-- vscode-markdown-toc -->
 * 1. [介绍](#)
 * 2. [系统安装](#-1)
@@ -62,14 +65,15 @@
 * 7. [常见问题及解决办法](#-1)
 	* 7.1. [如何外接显示器问题](#-1)
 	* 7.2. [修改默认程序](#-1)
+	* 7.3. [无法提交处理 (无效或已损坏的软件包)](#-1)
+* 8. [资源地址](#-1)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
 	autoSave=true
 	/vscode-markdown-toc-config -->
 <!-- /vscode-markdown-toc -->
-# easy-manjaro
-> 从零构建一个基于manjaro linux的桌面开发环境，因本人从事java开发，下面需要的工具大多为java开发需要的，其他软件可自行在aur仓库中搜索安装。
+
 
 * 1. [介绍](#)
 * 2. [系统安装](#-1)
@@ -842,8 +846,29 @@ manjaro的驱动很强大，可以直接识别到外界的显示器。如果没�
 1. 进入“系统设置”->”搜索默认程序“
 2. 修改对应的默认程序即可
 
+###  7.3. <a name='-1'></a>无法提交处理 (无效或已损坏的软件包)
+1.首先更新一下密钥，如果没有安装archlinux-keyring,请及时安装
+```aidl
+sudo pacman-key --refresh-keys
+```
+2.重新加载相应的签名密钥
+```aidl
+sudo pacman-key --init
+sudo pacman-key --populate
+```
+3。清除pacman 的缓冲文件
+```aidl
+sudo pacman -Scc
+```
 
-## 资源地址
+4.更新或者安装系统即可
+```aidl
+sudo pacman -Syu
+```
+
+
+
+##  8. <a name='-1'></a>资源地址
 
 - [manjaro官网](https://manjaro.org/)
 - [arch仓库地址](https://aur.archlinux.org/)
