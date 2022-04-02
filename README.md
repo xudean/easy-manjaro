@@ -58,6 +58,10 @@
 		* 4.13.2. [docker-compose](#docker-compose)
 	* 4.14. [娱乐软件](#-1)
 		* 4.14.1. [网抑云音乐](#-1)
+	* 4.15. [k8s管理工具](#k8s)
+	* 4.16. [文件搜索](#-1)
+	* 4.17. [host地址切换工具](#host)
+	* 4.18. [绘图工具](#-1)
 * 5. [系统设置](#-1)
 	* 5.1. [快捷键设置](#-1)
 		* 5.1.1. [设置方式](#-1)
@@ -806,6 +810,40 @@ sudo pacman -S docker-compose
 ```
 $ sudo pacman -S netease-cloud-music vlc
 ```
+
+###  4.15. <a name='k8s'></a>k8s管理工具
+
+[The Kubernetes IDE](https://www.baidu.com/link?url=JTjUnyI5EdlTCyK71Z12gYdMpT_cwZd77wXnJ6vj0vW&wd=&eqid=d7e838200012af350000000562483afe)
+
+```
+$ yay -S lens-bin
+```
+
+###  4.16. <a name='-1'></a>文件搜索
+
+fsearch，类似windows的everything。
+
+```
+$ yay -S fsearch-git
+```
+
+###  4.17. <a name='host'></a>host地址切换工具
+
+[switchhosts](https://github.com/oldj/SwitchHosts)。官方也提供了Appimage的安装包，如果不使用命令也可以执行下载安装。
+
+```
+$ yay -S switchhosts-bin
+```
+
+###  4.18. <a name='-1'></a>绘图工具
+
+draw.io绘图神器
+
+```
+$ sudo pacman -S drawio-desktop-bin
+```
+
+
 
 ##  5. <a name='-1'></a>系统设置
 
