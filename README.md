@@ -903,8 +903,8 @@ sudo pacman -Scc
 ```aidl
 sudo pacman -Syu
 ```
-
-
+### 7.4 idea等无法使用中文输入法
+参考：https://blog.csdn.net/chen462488588/article/details/116496468
 
 ##  8. <a name='-1'></a>资源地址
 
