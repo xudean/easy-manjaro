@@ -266,6 +266,8 @@ yay -Qi package # 检查安装的版本
 
 因为Fcitx4有很多bug，中文输入法推荐使用fcitx5。[官方wiki](https://wiki.archlinux.org/title/Fcitx5_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87))
 
+> 直接安装`manjaro-asian-input-support-fcitx5`能避免复杂的配置问题
+
 - 卸载fcitx4（如果已安装）
 
 ```shell
