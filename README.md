@@ -608,6 +608,11 @@ yay -S deepin-wine-wechat
 ```]
 yay -S deepin-wine-tim	
 ```
+##### appimagelauncher
+
+```
+sudo pacman -S appimagelauncher
+```
 
 ##### 腾讯会议
 
