@@ -913,6 +913,9 @@ sudo pacman -Syu
 ### 7.4 idea等无法使用中文输入法
 参考：https://blog.csdn.net/chen462488588/article/details/116496468
 
+### 7.5 解决KDE标题栏过大的问题
+参考：https://blog.csdn.net/yalin1997/article/details/122711033
+
 ##  8. <a name='-1'></a>资源地址
 
 - [manjaro官网](https://manjaro.org/)
