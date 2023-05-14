@@ -765,6 +765,9 @@ sudo modprobe vboxdrv
 
 ```
 
+如果无法读取usb设备，参考：https://juejin.cn/post/6924927130933395464
+
+
 ###  4.11. <a name='WPS'></a>WPS
 
 ```
