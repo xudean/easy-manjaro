@@ -759,6 +759,12 @@ sudo pacman -S linux512-virtualbox-host-modules
 sudo pacman -S linux512 linux512-headers
 ```
 
+执行
+```
+sudo modprobe vboxdrv
+
+```
+
 ###  4.11. <a name='WPS'></a>WPS
 
 ```
